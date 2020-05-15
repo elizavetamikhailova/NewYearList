@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="record"
+            type="com.happy.newyearlist.models.Record" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        app:cardElevation="3dp"
+        android:layout_marginTop="16dp">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{record.isDone}"
+            android:text="@{record.recordTitle}" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
+
+</layout>
